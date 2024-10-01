@@ -1,0 +1,525 @@
+body {
+    margin: 0em;
+    width:100vw;
+    overflow-x: hidden;
+    background-image: url('images/warpgriddark.png');
+    color: rgb(255, 255, 255);
+    font-family: "Averia Serif Libre", system-ui;
+    line-height: 1.5em;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 0em;
+}
+h2 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+h3 {
+  font-size: 1.6em;
+}
+h4 {
+  font-size: 1.4em;
+}
+h5 {
+  font-size: 1.2em;
+}
+/* Centipede Divider */
+s {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 9em;
+  vertical-align:super;
+  line-height: 0px;
+}
+
+a {
+  color: #a6ff00;
+}
+
+hr{
+  margin: 2em;
+  border: 1px solid rgb(255, 0, 234);
+}
+.rainbowtxt {
+  background-image: linear-gradient(45deg, #ff00ff, #e1ff00, #00e1ff,#e1ff00,#ff00ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: gradientmove;
+  background-size: 150%;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction:alternate;
+}
+@keyframes gradientmove {
+  0%{background-position:0% 50%}
+  100%{background-position:100% 50%}
+}
+
+header {
+    display: flex;
+    height: 150px;
+    background-color: black;
+    color: rgb(0, 0, 0);
+}
+
+#sketchspacer {
+    display:flex;
+    flex-shrink: 0;
+    width:150px;
+    height:140px;
+}
+
+#logomorph {
+    display: flex;
+    align-items: center;
+    font-family: "Kablammo", system-ui;
+    -webkit-text-stroke: 1px white;
+    font-variation-settings:"MORF" 0;
+    animation-name: morf;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate
+    
+  }
+  
+  @keyframes morf {
+    0%   {font-variation-settings:"MORF" 0;}
+    25%  {font-variation-settings:"MORF" 15;}
+    50%  {font-variation-settings:"MORF" 30;}
+    100% {font-variation-settings:"MORF" 60;}
+  }
+
+nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    margin-bottom:1em;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    background-image: linear-gradient(#000000 60%, transparent 100%);
+    font-family: "Advent Pro";
+}
+
+li {
+    list-style: none;
+    text-align: center;
+    padding: 0.5em;
+}
+
+li a{
+    text-decoration: none;
+    text-align: justify;
+    font-weight: 800;
+    color: rgb(220, 220, 220);
+    mix-blend-mode: difference;
+    isolation: isolate;
+}
+
+.btn {
+
+  background-size: 150% auto;
+  border-radius: 0.4em;
+  margin: 0.2em;
+  transition: 0.5s;
+}
+
+.nav1 {
+    flex-grow: 1;
+    background-image: linear-gradient(to right, #f00000 0%, #aaf300 100%);
+}
+
+.nav2 {
+    flex-grow: 1;
+    background-image: linear-gradient(to right, #002fff 0%, #ff00dd 100%);
+}
+
+.nav3 {
+    flex-grow: 1;
+    background-image: linear-gradient(to right, #15ff00 0%, #0077ff 100%);
+}
+
+.nav4 {
+    flex-grow: 1;
+    background-image: linear-gradient(to right, #ff00ea 0%, #fffb00 100%);
+
+}
+.nav5 {
+    flex-grow: 1;
+    background-image: linear-gradient(to right, #00ffea 0%, #ff00dd 100%);
+}
+
+.btn:hover {
+  background-position: right center;
+}
+
+li a:hover {
+  color: #000000;
+  mix-blend-mode: normal;
+
+}
+
+section {
+    display: flex;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+article {
+    align-content: center;
+    width: auto;
+    background-color: rgb(0, 0, 0, 80%);
+    border:1px solid white;
+    border-radius: 1.5em;
+    padding: 1em;
+    margin: 2em;
+}
+
+form {
+  text-align: left;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 1em;
+  padding: 1em;
+  box-sizing: border-box;
+}
+.form-label {
+  font-weight: bold;
+  display: inline;
+  color: #0011ff;
+}
+
+.rule-label {
+  font-weight: bold;
+  display: block;
+  color: blue;
+  border: 1px solid blue;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+.form-control {
+  display: block;
+  background-color: blue;
+  color: white;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.other-val {
+  display: block;
+  border-radius: 0.5em;
+  background-color: blue;
+  color: white;
+  padding: 0.3em;
+  margin-bottom: 1.5em;
+  margin-top: 1em;
+  width: 50%;
+}
+
+.formbuilder-checkbox {
+  padding: 0.2em;
+  margin: 1em;
+  color: #ff0055;
+}
+
+.contactform h2 {
+  display: block;
+  padding: 0.5em;
+  color: #0011ff;
+}
+.contactform button {
+  color: #ffffff;
+  font-family: advent pro;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 0.7em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  background-color: #ff0077;
+}
+.contactform button:hover {
+  background-color: #d0ff00;
+  color: #0011ff;
+}
+.tooltop-element {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.social-links > a > img {
+  width: 66px;
+  height: 66px;
+}
+
+.social-links > a > img:hover{
+  background-color: #ff0055;
+  border-radius: 1em;
+  mix-blend-mode: screen;
+}
+
+footer {
+    display: flexbox;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    background-color:rgb(0, 0, 0);
+    text-align: right;
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    width: 100%;
+}
+
+/* Mobile container utility class: */
+
+.container {
+  width: 100vw;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* xxs */
+@media (min-width: 360px) {
+
+  .container {
+    max-width: 475px;
+  }
+
+  li a {
+    font-size: 1em;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .form-control {
+    resize: vertical;
+    width: 90%;
+  }
+
+  article {
+    padding:2rem;
+  }
+
+  .section :nth-child(1) { order: 2; }
+  .section :nth-child(2) { order: 1; }
+  .section :nth-child(3) { order: 3; }
+
+  #logomorph {
+    font-size:3.8em;
+  }
+
+}
+
+
+/* xs */
+@media (min-width: 475px) {
+
+  .container {
+    max-width: 475px;
+  }
+
+  li a {
+    font-size: 1.3em;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .form-control {
+    resize: vertical;
+    width: 90%;
+  }
+
+  article {
+    padding:2rem;
+  }
+
+  .section :nth-child(1) { order: 2; }
+  .section :nth-child(2) { order: 1; }
+  .section :nth-child(3) { order: 3; }
+
+  #logomorph {
+    font-size:5em;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+
+  .container {
+    max-width: 640px;
+  }
+
+  li a {
+    font-size: 1.6em;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .form-control {
+    resize: vertical;
+    width: 90%;
+  }
+
+  article {
+    padding:3rem;
+  }
+
+  .section :nth-child(1) { order: 2; }
+  .section :nth-child(2) { order: 1; }
+  .section :nth-child(3) { order: 3; }
+
+  #logomorph {
+    font-size:6em;
+  }
+} 
+
+/* md */
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 768px;
+  }
+
+  li a {
+    font-size: 1.6em;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .form-control {
+    resize: vertical;
+    width: 90%;
+  }
+
+  article {
+    padding:5rem;
+  }
+  .section :nth-child(1) { order: 2; }
+  .section :nth-child(2) { order: 1; }
+  .section :nth-child(3) { order: 3; }
+
+  #logomorph {
+    font-size:6.5em;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+
+  .container {
+    max-width: 1024px;
+  }
+
+  li a {
+    font-size: 1.6em;
+  }
+
+  .section {
+    flex-direction: row;
+  }
+
+  .form-control {
+    resize: both;
+    width: 80%;
+    min-width: 500px;
+    max-width:1000px;
+  }
+
+  article {
+    padding:3rem;
+  }
+
+  .section :nth-child(1) { order: 1; }
+  .section :nth-child(2) { order: 2; }
+  .section :nth-child(3) { order: 3; }
+
+  #logomorph {
+    font-size:7em;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+
+  li a {
+    font-size: 1.6em;
+  }
+
+  .section {
+    flex-direction: row;
+  }
+
+  .form-control {
+    resize: both;
+    width: 80%;
+    min-width: 500px;
+    max-width:1000px;
+  }
+
+  article {
+    padding:4rem;
+  }
+
+  .section :nth-child(1) { order: 1; }
+  .section :nth-child(2) { order: 2; }
+  .section :nth-child(3) { order: 3; }
+
+  #logomorph {
+    font-size:8em;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+
+  .container {
+    max-width: 1536px;
+  }
+
+  li a {
+    font-size: 1.6em;
+  }
+
+  .section {
+    flex-direction: row;
+  }
+
+  .form-control {
+    resize: both;
+    width: 80%;
+    min-width: 500px;
+    max-width:1000px;
+  }
+
+  article {
+    padding:4rem;
+  }
+
+  .section :nth-child(1) { order: 1; }
+  .section :nth-child(2) { order: 2; }
+  .section :nth-child(3) { order: 3; }
+
+  #logomorph {
+    font-size:8em;
+  }
+}

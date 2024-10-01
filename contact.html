@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no
+        ">
+        <link rel="favicon" href="images/tv.gif">
+        <title>OVANS SITE</title>
+
+        <script src="cubespin.js"></script>
+        <script src="p5.js"></script>
+        <link rel="stylesheet" href="style.css">
+
+        <style>@import url('https://fonts.googleapis.com/css2?family=Kablammo:MORF@60&display=swap');</style>
+
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        </style>
+    
+    </head>
+
+    <body>
+        <header>
+            <div id="sketchspacer">
+            </div>
+            <div id="logomorph">
+              OVANS
+            </div>
+        </header>
+        <nav>
+            <div class="btn nav1">
+                <li><a href="index.html">ABOUT</a></li>
+            </div>
+                <div class="btn nav2">
+                <li><a href="https://www.etsy.com/ca/shop/ovansclub" target="_blank">SHOP</a></li>
+            </div>
+                <!-- <div class="btn nav3">
+                <li><a href="">FUN</a></li>
+            </div> -->
+                <div class="btn nav4">
+                <li><a href="commissions.html">COMMISSION</a></li>
+            </div>
+                <div class="btn nav5">
+                <li><a href="contact.html">CONTACT</a></li>
+        </nav>
+
+        <section class="section container">
+            <article class="contact">
+                <div class="contactform">
+                    <form onsubmit="sendContact(event)">
+                        <div>
+                            <h2 access="false">Write a message:<br></h2>
+                            <label for="nameInput" class="form-label">Name:</label>
+                            <input type="text" class="form-control" id="nameInput" access="false" maxlength="255" required="required" aria-required="true" placeholder="What should I call you?">
+                        </div>
+
+                        <div>
+                          <label for="emailInput" class="form-label">Email:</label>
+                          <input type="email" class="form-control" id="emailInput" access="false" maxlength="255" required="required" aria-required="true" placeholder="Where can I reach you?">
+                        </div>
+
+                        <div>
+                          <label for="messageInput" class="form-label">Message:</label>
+                          <textarea class="form-control" id="messageInput" rows="5" access="false" maxlength="5000" required="required" aria-required="true" placeholder="Write your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+                    </form>
+
+<script>
+async function sendContact(ev) {
+    ev.preventDefault();
+
+    // Disable default form submit action.
+    const senderName = document
+    .getElementById('nameInput').value;
+    const senderEmail = document
+    .getElementById('emailInput').value;
+    const senderMessage = document
+    .getElementById('messageInput').value;
+    
+    //Webhooks
+    const webhookBody = {
+    embeds: [{
+        title: 'Contact Form Submitted',
+        fields: [
+        { name: 'Name', value: senderName },
+        { name: 'Sender', value: senderEmail },
+        { name: 'Message', value: senderMessage }
+        ]
+    }],
+    };
+    const webhookUrl = 'https://discord.com/api/webhooks/1290390919488733266/tdw3eb4gqeeb1yyskwz63iF3QmsFK-QVkj4ExGeKjhB3OOKcy0InqazPAKl-C7I3g7OK'; //URL
+    
+    const response = await fetch(webhookUrl, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(webhookBody),
+    });
+    
+    //SUCCESS
+    
+    if (response.ok) {
+    alert('Sent and received! Thank you for your message.');
+    } else {
+    alert('Oh dang, something went wrong! Please try again later!');
+}
+}
+</script>
+                </div>
+            </article>
+
+            <article id="contactinfo">
+                <h2>Get In Touch!</h2>
+                <p>Please do not hesitate to reach out if you have any questions or inquiries.</p>
+                <p>If you would like to commission me, please use <a href="commissions.html">this page</a> to submit a formal commission request.</p>
+                <p>If you're experiencing any issues with this form, please contact me directly via email and I will get back to you as soon as possible.
+                <br><br>
+                 Email: <a href= "mailto: ovanszone@gmail.com"> ovanszone@gmail.com </a></p>
+            </article>
+        </section>
+        <footer>
+            © OVANS ♡ 2024
+        </footer>
+    </body>
+</html>
