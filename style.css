@@ -288,7 +288,7 @@ footer {
 /* RESPONSIVE BREAKPOINTS */
 
 /* xxs */
-@media (min-width: 360px) {
+@media (min-width: 320px) {
 
   .container {
     max-width: 475px;
