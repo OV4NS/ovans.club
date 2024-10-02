@@ -287,7 +287,7 @@ footer {
 
 /* RESPONSIVE BREAKPOINTS */
 
-/* xxs */
+/* xxxs */
 @media (min-width: 320px) {
 
   .container {
@@ -295,7 +295,7 @@ footer {
   }
 
   li a {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 
   .section {
@@ -316,11 +316,44 @@ footer {
   .section :nth-child(3) { order: 3; }
 
   #logomorph {
-    font-size:3.8em;
+    font-size:3em;
   }
 
 }
 
+/* xxs */
+@media (min-width: 360px) {
+
+  .container {
+    max-width: 475px;
+  }
+
+  li a {
+    font-size: 1em;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .form-control {
+    resize: vertical;
+    width: 90%;
+  }
+
+  article {
+    padding:1rem;
+  }
+
+  .section :nth-child(1) { order: 2; }
+  .section :nth-child(2) { order: 1; }
+  .section :nth-child(3) { order: 3; }
+
+  #logomorph {
+    font-size:3.6em;
+  }
+
+}
 
 /* xs */
 @media (min-width: 475px) {
