@@ -49,7 +49,7 @@
         </nav>
 
         <section class="section container">
-            <article class="contact">
+            <article>
                 <div class="contactform">
                     <form onsubmit="sendContact(event)">
                         <div>
@@ -81,11 +81,12 @@ async function sendContact(ev) {
     .getElementById('emailInput').value;
     const senderMessage = document
     .getElementById('messageInput').value;
+
     
     //Webhooks
     const webhookBody = {
     embeds: [{
-        title: 'Contact Form Submitted',
+        title: 'Someone sent a message!',
         fields: [
         { name: 'Name', value: senderName },
         { name: 'Sender', value: senderEmail },
@@ -115,7 +116,7 @@ async function sendContact(ev) {
                 </div>
             </article>
 
-            <article id="contactinfo">
+            <article>
                 <h2>Get In Touch!</h2>
                 <p>Please do not hesitate to reach out if you have any questions or inquiries.</p>
                 <p>If you would like to commission me, please use <a href="commissions.html">this page</a> to submit a formal commission request.</p>

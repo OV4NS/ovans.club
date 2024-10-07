@@ -47,12 +47,167 @@
                 <div class="btn nav5">
                 <li><a href="contact.html">CONTACT</a></li>
         </nav>
-            <article id="contactinfo">
-                <img src="images/underconstuction.gif" alt="under construction flames wordart gif">
-                <p>This form is currently under construction. I am fighting the javascript demons.</p>
-                <p>Thank you for your patience. Please check back later. ♡ <br>
-                    <br>[Last Update: 01/10/2024]</p>
-                
+            <article>
+                <br>
+                <div class="sampleimg">
+                    <img src="/images/commissionspost.png" alt="image of commission examples with prices">
+                </div>
+                <p> <a href="/images/commissionspost.png" target="_blank">Full View</a> ★ <a href="commissionexamples.html" target="_blank">Example Gallery</a> </p>
+            </article>
+            <article>
+                <div class="contactform">
+                    <form onsubmit="sendContact(event)">
+                        <div>
+                            <h2 access="false">Commission Request Form<br></h2>
+                            <p access="false">Please read through and complete the form carefully before submitting your commission request. <span class="highlight">Once your submission has been received,I will reach out through your preferred contact method to gather reference images and arrange payment.</span> If you have any questions about commissions, or you have not received a response to your request form submission, please do not hesitate to contact me.</p>
+                            <p class="formnote" access="false">Terms of Service are subject to change without notice. Last Updated: 10/06/2024. </p>
+
+            <hr>
+            <h4>Basic Information:</h4>
+
+                        <label for="nameInput" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="nameInput" access="false" maxlength="255" required="required" aria-required="true" placeholder="What should I call you?">
+                        </div>
+                        <div>
+
+                          <label for="emailInput" class="form-label">Email:</label>
+                          <input type="email" class="form-control" id="emailInput" access="false" maxlength="255" required="required" aria-required="true" placeholder="Where can I reach you?">
+                        </div>
+
+                        
+                        <label for="contactInput" class="form-label">Contact:</label>
+                        <p class="formnote" access="false">*Please no social media DM's, enter your discord or email only!</p>
+                        <input type="text" class="form-control" id="contactInput" access="false" maxlength="255" required="required" aria-required="true" placeholder="What is your preferred contact method?">
+
+                        <hr>
+                        <h4 access="false">Order Information:</h4>
+
+                        <label for="typeInput" class="form-label">What type of commission would you like?</label>
+                        <input type="text" class="form-control" id="typeInput" access="false" maxlength="255" required="required" aria-required="true" placeholder="Full-body illustration, icon, or custom/other?">
+
+                        <label for="amountInput" class="form-label">How many characters?</label>
+                        <p class="formnote" access="false">*Extra characters are +50% of base price, only one single character allowed for icons!</p>
+                        <input type="text" class="form-control" id="amountInput" access="false" maxlength="255" required="required" aria-required="true" placeholder="Enter the number of characters you want.">
+
+                        <label for="noteInput" class="form-label">Do you have any other notes?</label>
+                        <textarea class="form-control" id="noteInput" rows="2" access="false" maxlength="5000" required="required" aria-required="true" placeholder="Write your notes here..."></textarea>
+
+                        <hr>
+                        <h4 access="false">Rules/Terms of Service:</h4>
+
+                        <label for="ruleInput" class="rule-label">*All commissions include 2 FREE minor revisions for any mistakes or miscommunications. I reserve the right to charge an extra 20% fee for any major or extensive revisions.</label>
+                        <p class="rulenote"access="false"> Type "Okay" to confirm: </p>
+                        <input type="text" class="form-control" id="rule1Input" access="false" maxlength="4" required="required" aria-required="true" placeholder="...">
+
+                        <label for="rule2Input" class="rule-label">*Complex designs may be subject to an extra fee.</label>
+                        <p class="rulenote"access="false"> Type "I understand" to confirm: </p>
+                        <input type="text" class="form-control" id="rule2Input" access="false" maxlength="12" required="required" aria-required="true" placeholder="...">
+
+                        <label for="rule3Input" class="rule-label">*Please no NSFW, but artistic nudity and suggestive themes are permitted.</label>
+                        <p class="rulenote"access="false"> Type "Sure thing" to confirm: </p>
+                        <input type="text" class="form-control" id="rule3Input" access="false" maxlength="10" required="required" aria-required="true" placeholder="...">
+
+                        <label for="rule4Input" class="rule-label">*I reserve the right to decline any commission that I do not feel comfortable with.</label>
+                        <p class="rulenote"access="false"> Type "Roger that" to confirm: </p>
+                        <input type="text" class="form-control" id="rule4Input" access="false" maxlength="10" required="required" aria-required="true" placeholder="...">
+
+                        <hr>
+                        <h4 access="false">Payment:</h4>
+ 
+                        <label for="rule5Input" class="rule-label">*ALL PRICES ARE IN USD. PAYMENT IS PAYPAL ONLY. You do not have to pay for paypal fees.</label>
+                        <p class="rulenote"access="false"> Type "Affirmative" to confirm: </p>
+                        <input type="text" class="form-control" id="rule5Input" access="false" maxlength="11" required="required" aria-required="true" placeholder="...">
+
+                        <label for="rule6Input" class="rule-label">Please send full payment upfront within 24 hours of confirmation unless stated otherwise. I will not start until full payment has been recieved. </label>
+                        <p class="rulenote"access="false"> Type "Yeah" to confirm: </p>
+                        <input type="text" class="form-control" id="rule6Input" access="false" maxlength="4" required="required" aria-required="true" placeholder="...">
+
+                        
+                        <label for="rule7Input" class="rule-label">Commissioners can receive a full refund if the piece has not been started. Late cancellations or completed pieces will NOT be refunded.</label>
+                        <p class="rulenote"access="false"> Type "No problem" to confirm: </p>
+                        <input type="text" class="form-control" id="rule7Input" access="false" maxlength="10" required="required" aria-required="true" placeholder="...">
+
+                        <p class='highlight' access="false">Please double-check that all your information is correct before submitting! Thank you.</p>
+
+                        <div>
+                            <button type="submit" class="btn btn-primary">SUBMIT COMMISSION REQUEST</button>
+                        </div>
+                        
+                    </form>
+
+<script>
+async function sendContact(ev) {
+    ev.preventDefault();
+
+    // Disable default form submit action.
+    const senderName = document
+    .getElementById('nameInput').value;
+    const senderEmail = document
+    .getElementById('emailInput').value;
+    const senderContact = document
+    .getElementById('contactInput').value;
+    const senderType = document
+    .getElementById('typeInput').value;
+    const senderAmount = document
+    .getElementById('amountInput').value;
+    const senderNote = document
+    .getElementById('noteInput').value;
+    const senderRule1 = document
+    .getElementById('rule1Input').value;
+    const senderRule2 = document
+    .getElementById('rule2Input').value;
+    const senderRule3 = document
+    .getElementById('rule3Input').value;
+    const senderRule4 = document
+    .getElementById('rule4Input').value;
+    const senderRule5 = document
+    .getElementById('rule5Input').value;
+    const senderRule6 = document
+    .getElementById('rule6Input').value;
+    const senderRule7 = document
+    .getElementById('rule7Input').value;
+    
+    //Webhooks
+    const webhookBody = {
+    embeds: [{
+        title: 'Commission Request Recieved',
+        fields: [
+        { name: 'Name', value: senderName },
+        { name: 'Sender', value: senderEmail },
+        { name: 'Contact', value: senderContact },
+        { name: 'Commission Type', value: senderType },
+        { name: 'Character Quantity', value: senderAmount },
+        { name: 'Notes', value: senderNote },
+        { name: 'Rule 1', value: senderRule1 },
+        { name: 'Rule 2', value: senderRule2 },
+        { name: 'Rule 3', value: senderRule3 },
+        { name: 'Rule 4', value: senderRule4 },
+        { name: 'Rule 5', value: senderRule5 },
+        { name: 'Rule 6', value: senderRule6 },
+        { name: 'Rule 7', value: senderRule7 }
+        ]
+    }],
+    };
+    const webhookUrl = 'https://discord.com/api/webhooks/1290412631030632489/rZk69f1RcfQfG_Z16vXwgGyBM5Iy2c5MjLmTyq94yGmWLb-KoVDFKVrW7E0IvylF0Op0'; //URL
+    
+    const response = await fetch(webhookUrl, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(webhookBody),
+    });
+    
+    //SUCCESS
+    
+    if (response.ok) {
+    alert('Sent and received! I will get back to you ASAP. If you do not recieve a response in 2-5 business days, please reach out via my contact page or email and let me know! Thank you for commissioning me ♡');
+    } else {
+    alert('Uh oh, something went wrong! Sorry about that, Please try again later!');
+}
+}
+</script>
+                </div>
             </article>
         </section>
         <footer>
